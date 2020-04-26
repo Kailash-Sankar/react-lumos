@@ -53,4 +53,26 @@ const Output = ({ options }) => {
   );
 };
 
-export { Label, Range, ButtonGroup, Output };
+const Header = () => {
+  return (
+    <div className='header'>
+      <div>L</div>
+      <div>U</div>
+      <div>M</div>
+      <div>O</div>
+      <div>S</div>
+    </div>
+  );
+};
+
+const Footer = () => {
+  return (
+    <div className='footer'>
+      <a href='https://github.com/Kailash-Sankar/react-lumos'>
+        Kailash Sankar, April 2020
+      </a>
+    </div>
+  );
+};
+
+export { Label, Range, ButtonGroup, Output, Header, Footer };

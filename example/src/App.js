@@ -2,6 +2,7 @@ import React from 'react';
 import Lumos from 'react-lumos';
 
 import Controls, { ToggleControls } from './Controls';
+import { Header, Footer } from './Components';
 
 const App = () => {
   const [delay, setDelay] = React.useState(2000);
@@ -9,7 +10,7 @@ const App = () => {
   const [grid, setGrid] = React.useState({ size: 1, uniform: true });
   const [particles, setParticles] = React.useState({ nop: 0, style: {} });
 
-  const [showControls, setShowControls] = React.useState(true);
+  const [showControls, setShowControls] = React.useState(false);
 
   // todo: use reducer
   const handleChange = (event) => {
@@ -53,6 +54,7 @@ const App = () => {
   return (
     <div>
       <div>
+        <Header />
         <ToggleControls handleChange={handleChange} />
         <Controls
           handleChange={handleChange}
@@ -64,6 +66,7 @@ const App = () => {
       <div style={{ width: '100%', height: '100%' }}>
         <Lumos {...options} />
       </div>
+      <Footer />
     </div>
   );
 };
