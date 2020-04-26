@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Stage = styled.div`
+export const StageWrapper = styled.div`
   width: 100%;
   height: 100%;
   position: absolute;
@@ -9,8 +9,14 @@ export const Stage = styled.div`
 
   .stage {
     transition: all 200ms linear;
+    border-right: 1px dotted #333;
     flex: 1;
-    border-right: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    .divider {
+      border-bottom: 1px dotted #333;
+      flex: 1;
+    }
   }
 
   .particles {

@@ -35,7 +35,7 @@ function Controls({ meta, handleChange, visible }) {
     max: 200,
     defaultValue: meta.particles.nop,
     step: 10,
-    action: 'rain',
+    action: 'particles',
     handleChange: handleChange
   };
 
@@ -86,7 +86,7 @@ function Controls({ meta, handleChange, visible }) {
         </div>
       </div>
 
-      <div className='row'>
+      <div className='row output'>
         <Output options={meta} />
       </div>
     </div>

@@ -33,7 +33,7 @@ const App = () => {
         setShowControls(!showControls);
         break;
       case 'particles':
-        let nop = ele.value;
+        let nop = parseInt(ele.value);
         setParticles({ nop: nop, style: {} });
         break;
       default:
@@ -48,7 +48,7 @@ const App = () => {
     particles
   };
 
-  console.log('options', options);
+  //console.log('options', options);
 
   return (
     <div>

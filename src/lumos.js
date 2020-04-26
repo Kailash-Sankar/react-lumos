@@ -1,14 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { bgGeneratorFn, genParticleStyles } from './utils';
-import { Stage } from './styles';
+import { StageWrapper } from './styles';
+
+// horizontal divider
+function RenderDivider({ size }) {
+  console.log('divider');
+  const d = [];
+  for (let j = 0; j < size; j++) {
+    d.push(<div key={j} className='divider' />);
+  }
+  return d;
+}
+const MemoizedDivider = React.memo(RenderDivider);
 
 // display element
 function renderElements({ bgStyles, grid }) {
   const elements = [];
   const sl = bgStyles.length;
   for (let i = 0; i < grid.size; i++) {
-    elements.push(<div key={i} className='stage' style={bgStyles[i % sl]} />);
+    elements.push(
+      <div key={i} className='stage' style={bgStyles[i % sl]}>
+        <MemoizedDivider size={grid.size} />
+      </div>
+    );
   }
   return elements;
 }
@@ -29,6 +44,9 @@ function Particles({ nop = 0, style = {} }) {
   return parts;
 }
 
+// memoize
+const MemoizedParticles = React.memo(Particles);
+
 // wrapper element
 function Lumos({ style, delay, mode, grid, particles }) {
   const [bgStyles, setBgStyles] = useState([
@@ -47,12 +65,12 @@ function Lumos({ style, delay, mode, grid, particles }) {
   }, [delay, mode, grid]);
 
   return (
-    <Stage style={style}>
+    <StageWrapper style={style}>
       {renderElements({ bgStyles, grid })}
       <div>
-        <Particles {...particles} />
+        <MemoizedParticles {...particles} />
       </div>
-    </Stage>
+    </StageWrapper>
   );
 }
 
