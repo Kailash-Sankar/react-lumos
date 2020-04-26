@@ -29,11 +29,11 @@ const typeMap = {
 
 // factory for background gen
 const bgGeneratorFn = (mode, limit = 0) => {
-  const type = typeMap[mode] || typeMap['plain'];
+  const type = typeMap[mode] || typeMap.plain;
 
   if (limit > 0) {
     return () => {
-      let styleList = [];
+      const styleList = [];
       // generate a series of styles one for each box
       for (let i = 0; i < limit; i++) {
         styleList.push({ [type.key]: type.fn() });

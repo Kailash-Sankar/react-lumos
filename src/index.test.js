@@ -1,7 +1,7 @@
-import { ExampleComponent } from '.'
+import Lumos from '.';
 
 describe('ExampleComponent', () => {
   it('is truthy', () => {
-    expect(ExampleComponent).toBeTruthy()
-  })
-})
+    expect(Lumos).toBeTruthy();
+  });
+});

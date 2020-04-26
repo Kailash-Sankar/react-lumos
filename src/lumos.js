@@ -5,8 +5,8 @@ import { Stage } from './styles';
 
 // display element
 function renderElements({ bgStyles, grid }) {
-  let elements = [];
-  let sl = bgStyles.length;
+  const elements = [];
+  const sl = bgStyles.length;
   for (let i = 0; i < grid.size; i++) {
     elements.push(<div key={i} className='stage' style={bgStyles[i % sl]} />);
   }
@@ -15,7 +15,7 @@ function renderElements({ bgStyles, grid }) {
 
 // particles
 function Particles({ nop = 0, style = {} }) {
-  let parts = [];
+  const parts = [];
   const styleList = genParticleStyles(nop);
   for (let i = 0; i < nop; i++) {
     parts.push(
@@ -37,7 +37,8 @@ function Lumos({ style, delay, mode, grid, particles }) {
 
   // register animation interval
   useEffect(() => {
-    const limit = grid.uniform ? 0 : grid.size; //color limits
+    // color limits
+    const limit = grid.uniform ? 0 : grid.size;
     const generateBg = bgGeneratorFn(mode, limit);
     const interval = setInterval(() => setBgStyles(generateBg), delay);
     return () => {
