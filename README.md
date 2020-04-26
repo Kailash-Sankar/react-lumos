@@ -2,7 +2,7 @@
 
 > Animated backgrounds with react
 
-[![NPM](https://img.shields.io/npm/v/react-lumos.svg)](https://www.npmjs.com/package/react-lumos) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/react-lumos.svg)](https://www.npmjs.com/package/react-lumos)
 
 ## Install
 
@@ -23,17 +23,29 @@ function App() {
 
 // customize
 const options = {
-  "delay": 2000, // delay between background transitions
-  "mode": "gradient", // "plain" or "graidient" background
-  "gridSize": 1, // number of grids in the element
-  "uniform": true, // should grids be unifomr
+  // delay between background transitions
+  "delay": 2000,
+  // "plain" or "graidient" background
+  "mode": "gradient",
+  // number of grids in the element
+  "gridSize": 1,
+  // should grids have uniform background
+  "uniform": true,
+  // particles animation
   "particles": {
-    "nop": 0, // no of particles
-    "style": {} // particle style overrides
+    // number of particles
+    "nop": 0,
+    // particle style overrides
+    "style": {}
   }
 }
 <Lumos {...options}>
 ```
+
+## Demo
+
+There's a working demo with dynamic settings panel which shows the options used.
+[Demo](https://Kailash-Sankar.github.io/react-lumos)
 
 ## License
 
