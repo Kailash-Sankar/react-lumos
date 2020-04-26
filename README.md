@@ -1,28 +1,38 @@
-# react-anim-bg
+# react-lumos
 
 > Animated backgrounds with react
 
-[![NPM](https://img.shields.io/npm/v/react-anim-bg.svg)](https://www.npmjs.com/package/react-anim-bg) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/react-lumos.svg)](https://www.npmjs.com/package/react-lumos) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
 ```bash
-npm install --save react-anim-bg
+npm install --save react-lumos
 ```
 
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React from 'react';
+import Lumos from 'react-lumos';
 
-import MyComponent from 'react-anim-bg'
-import 'react-anim-bg/dist/index.css'
+// with defaults
+function App() {
+    return <Lumos />;
+}
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
+// customize
+const options = {
+  "delay": 2000, // delay between background transitions
+  "mode": "gradient", // "plain" or "graidient" background
+  "gridSize": 1, // number of grids in the element
+  "uniform": true, // should grids be unifomr
+  "particles": {
+    "nop": 0, // no of particles
+    "style": {} // particle style overrides
   }
 }
+<Lumos {...options}>
 ```
 
 ## License

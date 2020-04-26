@@ -1,16 +1,17 @@
 {
-  "name": "react-anim-bg-example",
-  "homepage": "https://Kailash-Sankar.github.io/react-anim-bg",
+  "name": "react-lumos-example",
+  "homepage": "https://Kailash-Sankar.github.io/react-lumos",
   "version": "0.0.0",
   "private": true,
   "dependencies": {
     "react": "link:../node_modules/react",
+    "react-lumos": "link:..",
     "react-dom": "link:../node_modules/react-dom",
     "react-scripts": "link:../node_modules/react-scripts",
-    "react-anim-bg": "link:.."
+    "craco": "link:../node_modules/@craco/craco"
   },
   "scripts": {
-    "start": "node ../node_modules/react-scripts/bin/react-scripts.js start",
+    "start": "node ../node_modules/@craco/craco/bin/craco.js start",
     "build": "node ../node_modules/react-scripts/bin/react-scripts.js build",
     "test": "node ../node_modules/react-scripts/bin/react-scripts.js test",
     "eject": "node ../node_modules/react-scripts/bin/react-scripts.js eject"
