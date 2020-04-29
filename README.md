@@ -2,6 +2,7 @@
 
 > Animated backgrounds with react
 
+![npm bundle size](https://img.shields.io/bundlephobia/min/react-lumos)
 [![NPM](https://img.shields.io/npm/v/react-lumos.svg)](https://www.npmjs.com/package/react-lumos)
 
 ## Install
