@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/react-lumos/static/css/main.629b98c5.chunk.css",
-    "main.js": "/react-lumos/static/js/main.cea91731.chunk.js",
-    "main.js.map": "/react-lumos/static/js/main.cea91731.chunk.js.map",
+    "main.js": "/react-lumos/static/js/main.bf111b2c.chunk.js",
+    "main.js.map": "/react-lumos/static/js/main.bf111b2c.chunk.js.map",
     "runtime-main.js": "/react-lumos/static/js/runtime-main.355187b2.js",
     "runtime-main.js.map": "/react-lumos/static/js/runtime-main.355187b2.js.map",
     "static/js/2.7f7691a3.chunk.js": "/react-lumos/static/js/2.7f7691a3.chunk.js",
     "static/js/2.7f7691a3.chunk.js.map": "/react-lumos/static/js/2.7f7691a3.chunk.js.map",
     "index.html": "/react-lumos/index.html",
-    "precache-manifest.ef2a2b2d4a26f826078e6be0737ea513.js": "/react-lumos/precache-manifest.ef2a2b2d4a26f826078e6be0737ea513.js",
+    "precache-manifest.84ab90aafc20ebb72ea77e379eac501f.js": "/react-lumos/precache-manifest.84ab90aafc20ebb72ea77e379eac501f.js",
     "service-worker.js": "/react-lumos/service-worker.js",
     "static/css/main.629b98c5.chunk.css.map": "/react-lumos/static/css/main.629b98c5.chunk.css.map",
     "static/js/2.7f7691a3.chunk.js.LICENSE.txt": "/react-lumos/static/js/2.7f7691a3.chunk.js.LICENSE.txt",
-    "static/js/main.cea91731.chunk.js.LICENSE.txt": "/react-lumos/static/js/main.cea91731.chunk.js.LICENSE.txt"
+    "static/js/main.bf111b2c.chunk.js.LICENSE.txt": "/react-lumos/static/js/main.bf111b2c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.355187b2.js",
     "static/js/2.7f7691a3.chunk.js",
     "static/css/main.629b98c5.chunk.css",
-    "static/js/main.cea91731.chunk.js"
+    "static/js/main.bf111b2c.chunk.js"
   ]
 }
