@@ -50,7 +50,12 @@ const options = {
 ## Demo
 
 There's a working demo with a dynamic settings panel which generates options,
-[Demo](https://Kailash-Sankar.github.io/react-lumos)
+
+[https://Kailash-Sankar.github.io/react-lumos](https://Kailash-Sankar.github.io/react-lumos)
+
+A very low quality gif preview:
+
+![](/example/demo.gif)
 
 ## License
 
