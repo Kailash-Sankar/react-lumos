@@ -24,27 +24,31 @@ function App() {
 // customize
 const options = {
   // delay between background transitions
+  // set 0 for a fixed background (no transitions)
   "delay": 2000,
-  // "plain" or "graidient" background
+  // "plain" or "graidient" background color
   "mode": "gradient",
   // number of grids in the element
   "gridSize": 1,
   // should grids have uniform background
+  // generates random color per vertical otherwise
   "uniform": true,
   // particles animation
   "particles": {
     // number of particles
     "nop": 0,
-    // particle style overrides
+    // particle style override
     "style": {}
-  }
+  },
+  // wrapper style override
+  "style" : {}
 }
 <Lumos {...options}>
 ```
 
 ## Demo
 
-There's a working demo with dynamic settings panel which shows the options used.
+There's a working demo with a dynamic settings panel which generates options,
 [Demo](https://Kailash-Sankar.github.io/react-lumos)
 
 ## License

@@ -6,7 +6,7 @@ import { Header, Footer } from './Components';
 
 const App = () => {
   const [delay, setDelay] = React.useState(2000);
-  const [mode, setMode] = React.useState('plain');
+  const [mode, setMode] = React.useState('gradient');
   const [grid, setGrid] = React.useState({ size: 1, uniform: true });
   const [particles, setParticles] = React.useState({ nop: 0, style: {} });
 
@@ -18,7 +18,7 @@ const App = () => {
     //console.log({ value: ele.value, action: ele.dataset.action });
 
     switch (ele.dataset.action) {
-      case 'speed':
+      case 'delay':
         setDelay(parseInt(ele.value, 10));
         break;
       case 'bg-type':

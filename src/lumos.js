@@ -50,7 +50,7 @@ const MemoizedParticles = React.memo(Particles);
 // wrapper element
 function Lumos({ style, delay, mode, grid, particles }) {
   const [bgStyles, setBgStyles] = useState([
-    { backgroundColor: '#333', backgroundImage: 'none' }
+    { backgroundColor: 'rgb(55, 106, 104)', backgroundImage: 'none' }
   ]);
 
   // register animation interval
@@ -58,11 +58,15 @@ function Lumos({ style, delay, mode, grid, particles }) {
     // color limits
     const limit = grid.uniform ? 0 : grid.size;
     const generateBg = bgGeneratorFn(mode, limit);
-    const interval = setInterval(() => setBgStyles(generateBg), delay);
-    return () => {
-      clearInterval(interval);
-    };
-  }, [delay, mode, grid]);
+    if (delay > 0) {
+      const interval = setInterval(() => setBgStyles(generateBg), delay);
+      return () => {
+        clearInterval(interval);
+      };
+    } else {
+      setBgStyles(generateBg);
+    }
+  }, [delay, mode, grid.uniform]);
 
   return (
     <StageWrapper style={style}>

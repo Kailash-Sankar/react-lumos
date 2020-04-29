@@ -14,13 +14,12 @@ function Controls({ meta, handleChange, visible }) {
     return '';
   }
   let speedProps = {
-    min: 100,
+    min: 0,
     max: 3000,
     defaultValue: meta.delay,
-    step: 100,
-    action: 'speed',
-    handleChange: handleChange,
-    style: { direction: 'rtl' }
+    step: 200,
+    action: 'delay',
+    handleChange: handleChange
   };
   let countProps = {
     min: 1,
@@ -54,7 +53,7 @@ function Controls({ meta, handleChange, visible }) {
       </div>
 
       <div className='row'>
-        <Label text='Speed' />
+        <Label text='Delay' />
         <div className='field'>
           <Range {...speedProps} />
         </div>
